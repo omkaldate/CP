@@ -3,7 +3,7 @@ package Implementation;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class BeautifulMatrix_263 {
+public class SoftDrinking_A_151 {
     static class FastReader{
         BufferedReader br;
         StringTokenizer st;
@@ -65,24 +65,27 @@ public class BeautifulMatrix_263 {
         try {
             FastReader in = new FastReader();
             FastWriter out = new FastWriter();
+            //n, k, l, c, d, p, nl, np
+            long n = in.nextInt();
+            long k = in.nextInt();
+            long l = in.nextInt();
+            long c = in.nextInt();
+            long d = in.nextInt();
+            long p = in.nextInt();
+            long nl = in.nextInt();
+            long np = in.nextInt();
 
-            int row = -1;
-            int col = -1;
+            long totalMilimiter = k*l;
+            long totalSlice = c*d;
+            long totalSalt =  p;
 
-            for (int i=1; i<=5; i++) {
-                for (int j=1; j<=5; j++) {
-                    int x = in.nextInt();
-                    if (x == 1) {
-                        row = i;
-                        col = j;
-                    }
-                }
-            }
+            long lim1 = totalMilimiter / nl;
+            long lim2 = totalSalt / np;
+            long lim3 = totalSlice;
 
-            int rowMoves = Math.abs(row - 3);
-            int colMoves = Math.abs(col - 3);
+            long possibility = Math.min(lim1, Math.min(lim2, lim3));
 
-            out.print(rowMoves + colMoves);
+            out.print(possibility / n);
 
 
             out.close();

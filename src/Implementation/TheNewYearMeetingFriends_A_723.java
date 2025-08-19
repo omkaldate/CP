@@ -1,9 +1,10 @@
 package Implementation;
 
 import java.io.*;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class BeautifulMatrix_263 {
+public class TheNewYearMeetingFriends_A_723 {
     static class FastReader{
         BufferedReader br;
         StringTokenizer st;
@@ -65,25 +66,16 @@ public class BeautifulMatrix_263 {
         try {
             FastReader in = new FastReader();
             FastWriter out = new FastWriter();
+            //
+            int x1 = in.nextInt();
+            int x2 = in.nextInt();
+            int x3 = in.nextInt();
 
-            int row = -1;
-            int col = -1;
+            int[]arr = {x1, x2, x3};
+            Arrays.sort(arr);
 
-            for (int i=1; i<=5; i++) {
-                for (int j=1; j<=5; j++) {
-                    int x = in.nextInt();
-                    if (x == 1) {
-                        row = i;
-                        col = j;
-                    }
-                }
-            }
-
-            int rowMoves = Math.abs(row - 3);
-            int colMoves = Math.abs(col - 3);
-
-            out.print(rowMoves + colMoves);
-
+            int ans = (arr[1]- arr[0]) + (arr[2] - arr[1]);
+            out.print(ans);
 
             out.close();
         } catch (Exception e) {

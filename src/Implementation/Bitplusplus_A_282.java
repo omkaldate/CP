@@ -3,7 +3,7 @@ package Implementation;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class ChewbaccaandNumber_514 {
+public class Bitplusplus_A_282 {
     static class FastReader{
         BufferedReader br;
         StringTokenizer st;
@@ -65,40 +65,26 @@ public class ChewbaccaandNumber_514 {
         try {
             FastReader in = new FastReader();
             FastWriter out = new FastWriter();
+//            int testCases = in.nextInt();
+//            while(testCases-- > 0){
+                int n = in.nextInt();
 
-//                long number = in.nextLong();
-//                //long number = 420062703497L;  // for testing
-//                long ans = 0;
-//
-//                while(number > 0){
-//                    long digits = (long) Math.log10(number);
-//                    long window = (long) Math.pow(10, digits);
-//                    long firstDigi =  number / window;
-//
-//                    if(firstDigi == 9 && ans == 0){
-//                        ans +=  firstDigi * window;
-//                    }
-//                    else{
-//                        ans += (long) Math.min(firstDigi, 9-firstDigi) * window;
-//                    }
-//                    number %= window;
-//                }
-//             out.print(ans);
-
-
-            String s = in.nextLine();
-            StringBuilder ans = new StringBuilder();
-
-            for (int i=0; i<s.length(); i++) {
-                int d = s.charAt(i)-'0';
-
-                if (i == 0 && d == 9) ans.append(9);
-                else ans.append(Math.min(d, 9-d));
-            }
-
-            out.println(ans.toString());
-
-
+                int ans = 0;
+                for(int i=0; i< n; i++){
+                    String str = in.next();
+                    for(char ch : str.toCharArray()){
+                        if(ch == '-'){
+                            ans--;
+                            break;
+                        }
+                        if(ch == '+'){
+                            ans++;
+                            break;
+                        }
+                    }
+                }
+                out.print(ans);
+           // }
             out.close();
         } catch (Exception e) {
             return;
