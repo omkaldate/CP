@@ -38,8 +38,7 @@ public class MergingtheSets_B_2146 {
             int cnt = 0;
 
             for(int xx =0; xx <n; xx++){
-                HashMap<Integer,Integer> dumMap = new HashMap<>(mpp);
-                cnt += fun(xx,larr, m, dumMap);
+                cnt += fun(xx,larr, m, mpp);
 
                 if(cnt == 2) break;
             }
@@ -50,18 +49,13 @@ public class MergingtheSets_B_2146 {
         }
     }
 
+
     public static int fun(int i, ArrayList<ArrayList<Integer>> ls, int m, HashMap<Integer,Integer> mpp){
-
         int len = ls.get(i).size();
-
         for(int x=0; x<len; x++){
             int val = ls.get(i).get(x);
 
-            int cnt = mpp.get(val);
-            cnt--;
-
-            if(cnt == 0) return 0;
-            mpp.put(val, cnt);
+            if(mpp.get(val)-1 == 0) return 0;
         }
         return 1;
     }
