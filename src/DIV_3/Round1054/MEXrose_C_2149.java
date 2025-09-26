@@ -37,8 +37,8 @@ public class MEXrose_C_2149{
             if (allPresent || k == 0) {
                 System.out.println(hasK ? kCount : 0);
             } else {
-               if(absCount < kCount) System.out.println(absCount + (kCount-absCount));
-               else System.out.println(absCount - kCount);
+               if(absCount <= kCount) System.out.println(absCount + (kCount-absCount));
+               else System.out.println(absCount);
             }
         }
     }
