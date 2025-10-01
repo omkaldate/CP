@@ -1,4 +1,4 @@
-//package Maths;
+package Maths;
 
 import java.util.Arrays;
 import java.util.Scanner;
