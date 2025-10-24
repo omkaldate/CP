@@ -10,7 +10,17 @@ public class MostUnstableArray_A_1353 {
             int n = sc.nextInt();
             int m =sc.nextInt();
 
-
+            if(n == 1) {
+                System.out.println(0);
+                continue;
+            }
+            if(n == 2){
+                System.out.println(m);
+                continue;
+            }
+            else{
+                System.out.println(m*2);
+            }
         }
     }
 }
