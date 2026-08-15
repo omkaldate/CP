@@ -28,12 +28,10 @@ public class biundedCoindChangeQ2Rutuja {
 
     public static int spaceOp(int t , int[]block, int[]maxCap){
         int n = block.length;
-
         int[]dp =  new int[t+1];
 
         for(int i=0; i<=t; i++) dp[i] = (int) 1e9;
         dp[0] = 0;
-
 
         for(int ind =1; ind<=n; ind++) {
             int[]cur = new int[t+1];
